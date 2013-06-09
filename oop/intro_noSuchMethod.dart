@@ -30,7 +30,7 @@ class MyClass {
 }
 
 class MyClassWithNoSuchMethod {
-  dynamic noSuchMethod(InvocationMirror invocation) {
+  dynamic noSuchMethod(Invocation invocation) {
     print('isAccessor: ${invocation.isAccessor}');
     print('isSetter: ${invocation.isSetter}');
     print('isGetter: ${invocation.isGetter}');

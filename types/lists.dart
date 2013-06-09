@@ -11,26 +11,16 @@ void main() {
   //realList[4] = 10; // Exception
   realList.add(10);
   print(realList);
-  
-  Collection realCollection = [1, true, 'String', 5.6e5];
-  print(realCollection);
-  
+
   // Lists types
   print('');
-  print('list is Collection ${list is Collection}');
   print('list is List ${list is List}');
   //print('list is Sequence ${list is Sequence}');
   print('list is Iterable ${list is Iterable}');
   print('');
-  print('realList is Collection ${realList is Collection}');
   print('realList is List ${realList is List}');
   //print('realList is Sequence ${realList is Sequence}');
   print('realList is Iterable ${realList is Iterable}');
-  print('');
-  print('realCollection is Collection ${realCollection is Collection}');
-  print('realCollection is List ${realCollection is List}');
-  //print('realCollection is Sequence ${realCollection is Sequence}');
-  print('realCollection is Iterable ${realCollection is Iterable}');
   print('');
   
   // Creating an extendable list

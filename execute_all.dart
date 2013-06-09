@@ -80,7 +80,7 @@ void main() {
   list.add('libraries/multi/app/uses_multifiles_lib.dart');
   list.add('libraries/reexport/using_partial_lib.dart');
   list.add('libraries/getset/uses_getset_library.dart');
-  
+
   for (String file in list) {
     spawnUri(file);
   }

@@ -1,4 +1,5 @@
 /// Author: Yohan Beschi
+import 'dart:mirrors';
 
 /**
  * Entry Point 
@@ -19,9 +20,10 @@ class MyList {
     this.list = new List();
   }
   
-  int get sum => this.list.reduce(0, (p, e) => p + e);
+  int get sum => this.list.reduce((p, e) => p + e);
   
-  dynamic noSuchMethod(InvocationMirror invocation) {
-    return invocation.invokeOn(this.list);
+  dynamic noSuchMethod(Invocation invocation) {
+    InstanceMirror mirror = reflect(this.list);
+    return mirror.delegate(invocation);
   }
 }

@@ -71,7 +71,7 @@ class LoginService implements Validator, Processor {
     }
   }
   
-  static bool contains(Collection<User> users, User user) {
+  static bool contains(List<User> users, User user) {
     for (User u in users) {
       if (u.get(User.us) == user.get(User.us)
           && u.get(User.ps) == user.get(User.ps)) {

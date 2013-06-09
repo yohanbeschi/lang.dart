@@ -1,4 +1,5 @@
 /// Author: Yohan Beschi
+import 'dart:mirrors';
 
 /**
  * Entry Point 
@@ -23,8 +24,9 @@ class Student {
 class MyList {
   List list = new List();
 
-  dynamic noSuchMethod(InvocationMirror invocation) {
-    return invocation.invokeOn(this.list);
+  dynamic noSuchMethod(Invocation invocation) {
+    InstanceMirror mirror = reflect(this.list);
+    return mirror.delegate(invocation);
   }
 }
 

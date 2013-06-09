@@ -29,7 +29,7 @@ class MockAuthenticationService implements AuthenticationService {
     return get(USERS_DB, user);
   }
   
-  static User get(Collection<User> users, User user) {
+  static User get(List<User> users, User user) {
     for (User u in users) {
       if (u.userName == user.userName
           && u.password == user.password) {

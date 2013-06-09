@@ -1,4 +1,5 @@
 /// Author: Yohan Beschi
+import 'dart:mirrors';
 
 /**
  * Entry Point 
@@ -24,11 +25,14 @@ abstract class DynaBean {
   
   DynaBean(this.map);
   
-  dynamic noSuchMethod(InvocationMirror invocation) {
+  dynamic noSuchMethod(Invocation invocation) {
     if (invocation.isGetter) {
-      return this.map[invocation.memberName];
+      Symbol symbol = invocation.memberName;
+      String getterName = MirrorSystem.getName(symbol);
+      return this.map[getterName];
     } else if (invocation.isSetter) {
-      String setterName = invocation.memberName.replaceFirst('=', '');
+      Symbol symbol = invocation.memberName;
+      String setterName = MirrorSystem.getName(symbol).replaceAll('=', '');
       this.map[setterName] = invocation.positionalArguments[0];
     } else {
       super.noSuchMethod(invocation);

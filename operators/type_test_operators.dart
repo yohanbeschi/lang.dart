@@ -7,6 +7,6 @@ void main() {
   assert('foo' is String);
   assert('foo' is! num);
   
-  Collection list = new List();
-  (list as List).add(10);
+  List list = new List();
+  list.add(10);
 }

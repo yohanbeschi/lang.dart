@@ -12,13 +12,12 @@ void main() {
   assert(sum == 45);
   
   //---- reduce
-  int initialValue = 0;
-  sum = list.reduce(initialValue, (previous, e) =>  previous + e);
+  sum = list.reduce((previous, e) =>  previous + e);
   assert(sum == 45);
   
   //---- filter + reduce
   // Add even numbers
-  sum = list.where((e) => e % 2 == 0).reduce(initialValue, (previous, e) =>  previous + e);
+  sum = list.where((e) => e % 2 == 0).reduce((previous, e) =>  previous + e);
   print(sum);
   assert(sum == 20);
 }
