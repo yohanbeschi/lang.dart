@@ -48,7 +48,7 @@ void main() {
   list.add('oop/constructor_inheritance.dart');
   list.add('oop/default_impl_factory.dart');
   list.add('oop/defining_noSuchMethod.dart');
-  list.add('oop/egality_overriding.dart');
+  list.add('oop/egality_overloading.dart');
   list.add('oop/enumerations.dart');
   list.add('oop/exceptions.dart');
   list.add('oop/final.dart');
@@ -56,8 +56,8 @@ void main() {
   list.add('oop/instance_inheritance.dart');
   list.add('oop/instance_methods.dart');
   list.add('oop/intro_noSuchMethod.dart');
-  list.add('oop/invokeOn_noSuchMethod.dart');
-  list.add('oop/methods_overriding.dart');
+  list.add('oop/delegate_noSuchMethod.dart');
+  list.add('oop/methods_overloading.dart');
   list.add('oop/mixed_constructor.dart');
   list.add('oop/mixins.dart');
   list.add('oop/mock_interfaces.dart');
