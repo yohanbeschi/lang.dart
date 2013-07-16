@@ -8,7 +8,7 @@ void main() {
   final Object object = new Object();
   //object = new Object(); => Error: line (x) pos (y): left hand side of '=' is not assignable
   
-  //---- The variable can't change instance but its fields can
+  //---- The variable can't be reassigned but its fields can
   final User user = new User('Foo', 'Bar');
   assert('Foo' == user.firstName);
   assert('Bar' == user.lastName);
@@ -19,7 +19,7 @@ void main() {
   assert('aaa' == user.firstName);
   assert('bbb' == user.lastName);
   
-  //---- The variable can't change instance but its fields can
+  //---- The variable can't be reassigned but its fields can
   final ImmutableUser immutableUser = new ImmutableUser('FooFoo', 'BarBar');
   assert('FooFoo' == immutableUser.firstName);
   assert('BarBar' == immutableUser.lastName);

@@ -12,5 +12,5 @@ void main() {
   print(age);
   
   var uninitialized;
-  print(uninitialized);
+  assert(uninitialized == null);
 }

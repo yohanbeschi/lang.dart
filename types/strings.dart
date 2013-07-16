@@ -36,6 +36,7 @@ void main() {
         'a' 
         'multi-line'
         'string');
+  print('This ' + 'is' + 'a' + 'string' + 'too');
   print('');
   
   // String interpolation
@@ -52,7 +53,7 @@ void main() {
           over multiple
           lines
           ''');
-  print("""And it's
+  print("""And with
 triple double
 quotes""");
   print('');
