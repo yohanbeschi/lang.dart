@@ -18,15 +18,15 @@ void main() {
   assert(multiplyAndDivide(2, 3, 2) == 3);
   assert(multiplyAndDivide(10, null, 5) == 2);
   
-  //---- Use of ? parameter
+  //---- Use of ? parameter (Deprecated)
   // Default value of divisor parameter ignored
-  assert(multiplyAndDivideExist(2, 2) == 4); 
+  //assert(multiplyAndDivideExist(2, 2) == 4); 
   
   // The following call crash. divisor is present but is null
   //assert(multiplyAndDivideExist(2, 3, null) == 6);
   
   // multiplier and divisor parameters are presents
-  assert(multiplyAndDivideExist(2, 3, 2) == 3);
+  //assert(multiplyAndDivideExist(2, 3, 2) == 3);
   
   // The following call crash. multiplier is present but is null
   //assert(multiplyAndDivideExist(10, null, 5) == 2);
@@ -69,6 +69,7 @@ num multiplyAndDivide(num number, [num multiplier, num divisor = 2]) {
   return number;
 }
 
+/*
 num multiplyAndDivideExist(num number, [num multiplier, num divisor = 2]) {
   if (?multiplier) {
     number *= multiplier;
@@ -80,3 +81,4 @@ num multiplyAndDivideExist(num number, [num multiplier, num divisor = 2]) {
   
   return number;
 }
+*/
